@@ -5,10 +5,12 @@
 - include: "*.dashboard.lookml"  # include all the dashboards
 
 - base_view: sankey_shopping_source_target_value
+  
+- view: sankey_shopping_source_target_value
   derived_table:
     sql: |
       select * from danger.sankey_shopping_source_target_value where source is not null order by 1, 2 asc
-
+      
   fields:
   - measure: count
     type: count
@@ -33,10 +35,12 @@
       - value
 
 - base_view: sankey_checkout_source_target_value
+
+- view: sankey_checkout_source_target_value
   derived_table:
     sql: |
-      select * from danger.sankey_checkout_source_target_value where target is not null order by 1, 2 asc
-
+      select * from danger.sankey_checkout_source_target_value where source is not null order by 1, 2 asc
+      
   fields:
   - measure: count
     type: count
