@@ -9,7 +9,7 @@
 - view: sankey_shopping_source_target_value
   derived_table:
     sql: |
-      select * from danger.sankey_shopping_source_target_value where source is not null order by 1, 2 asc;
+      select * from danger.sankey_shopping_source_target_value where source is not null order by 1, 2 asc
 
   fields:
   - measure: count
@@ -39,7 +39,7 @@
 - view: sankey_checkout_source_target_value
   derived_table:
     sql: |
-      select * from danger.sankey_checkout_source_target_value where target is not null order by 1, 2 asc;
+      select * from danger.sankey_checkout_source_target_value where target is not null order by 1, 2 asc
 
   fields:
   - measure: count
