@@ -1,5 +1,9 @@
 - view: sankey_checkout_source_target_value
-  sql_table_name: danger.sankey_checkout_source_target_value
+  derived_table:
+    sql: |
+      select * from danger.sankey_checkout_source_target_value where target is not null order by 1, 2 asc 
+    sql_trigger_value: SELECT current_date()
+
   fields:
 
   - dimension: source
