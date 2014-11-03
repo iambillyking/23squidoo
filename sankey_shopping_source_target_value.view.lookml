@@ -3,6 +3,7 @@
     sql: |
       select * from danger.sankey_shopping_source_target_value where source is not null order by 1, 2 asc 
     sql_trigger_value: SELECT current_date()
+    persist_for: 12 hours
 
   fields:
 
